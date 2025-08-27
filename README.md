@@ -112,36 +112,25 @@ A financial institution needs to protect customer data and transaction informati
 
 ## Prevention Methods
 
-### ARP Poisoning Prevention
 - **Port Security**: Enable MAC address filtering on network switches
 - **Network Segmentation**: Implement VLANs to isolate sensitive traffic
 - **Dynamic ARP Inspection**: Use switch security features to validate ARP packets
-
-### DNS Spoofing Prevention
 - **DNSSEC Implementation**: Deploy DNS Security Extensions for response validation
 - **Encrypted DNS**: Use DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT)
 - **Certificate Monitoring**: Implement SSL/TLS certificate validation
 
 ## Detection Methods
 
-### ARP Attack Detection
 - **ARP Monitoring Tools**: Deploy ARPWatch or similar detection software
 - **Network Traffic Analysis**: Monitor for unusual ARP traffic patterns and Check system logs for ARP table changes
 - **IDS/IPS Systems**: Implement intrusion detection for ARP anomalies
-
-### DNS Attack Detection
-- **DNS Query Monitoring**: Watch for abnormal DNS request patterns
-- **Certificate Transparency**: Monitor SSL certificate changes
-- **Response Validation**: Implement DNSSEC validation checking
+- **DNS Query Monitoring**: Watch for abnormal DNS request patterns and check system logs for DNS spoofing attempts
 
 ## Mitigation Strategies
 
-### Immediate Response
 - **Isolate Compromised Systems**: Quickly remove affected devices from network
 - **Clear Poisoned Caches**: Flush ARP and DNS caches on impacted systems
 - **Block Malicious Actors**: Update firewall rules to block attack sources
-
-### Long-term Protection
 - **Network Access Control**: Implement 802.1X authentication
 - **Regular Audits**: Conduct periodic security assessments
 
@@ -150,15 +139,6 @@ A financial institution needs to protect customer data and transaction informati
 - **DNS Security**: DNSSEC validators, DNS filtering services
 - **Network Monitoring**: IDS/IPS systems, SIEM solutions
 - **Endpoint Protection**: Host-based firewalls, EDR solutions
-
-## Quick Checklist
-- [ ] Enable port security on network switches
-- [ ] Implement DNSSEC validation
-- [ ] Deploy ARP monitoring tools
-- [ ] Use encrypted DNS protocols
-- [ ] Conduct regular security audits
-- [ ] Train staff on security awareness
-- [ ] Maintain updated incident response plans
 
 ---
 
